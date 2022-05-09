@@ -10,7 +10,7 @@ const babelConfig = {
 
 export default [{
   input: 'lib/browser.js',
-  output: { file: 'build/qrcode.js', format: 'iife', name: 'QRCode', exports: 'named' },
+  output: { file: 'build/qrcode.js', format: 'esm' },
   plugins: [commonjs(), resolve(), babel(babelConfig), terser()]
 }, {
   input: 'helper/to-sjis-browser.js',
